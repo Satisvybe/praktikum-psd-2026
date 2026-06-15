@@ -1,0 +1,1194 @@
+object Form1: TForm1
+  Left = 141
+  Top = 90
+  Width = 1013
+  Height = 573
+  Caption = 'IIR Design Filter'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object SpeedBttnSinyalCampur: TSpeedButton
+    Left = 896
+    Top = 104
+    Width = 97
+    Height = 49
+    OnClick = SpeedBttnSinyalCampurClick
+  end
+  object Label13: TLabel
+    Left = 912
+    Top = 112
+    Width = 60
+    Height = 13
+    Caption = 'Get Signal'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label14: TLabel
+    Left = 912
+    Top = 128
+    Width = 63
+    Height = 13
+    Caption = 'S1 + S2 + S3'
+  end
+  object Label15: TLabel
+    Left = 120
+    Top = 336
+    Width = 16
+    Height = 13
+    Caption = 'A1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label16: TLabel
+    Left = 184
+    Top = 336
+    Width = 16
+    Height = 13
+    Caption = 'A2'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label17: TLabel
+    Left = 56
+    Top = 312
+    Width = 16
+    Height = 13
+    Caption = 'B0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label18: TLabel
+    Left = 120
+    Top = 312
+    Width = 16
+    Height = 13
+    Caption = 'B1'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label19: TLabel
+    Left = 184
+    Top = 312
+    Width = 16
+    Height = 13
+    Caption = 'B2'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label10: TLabel
+    Left = 248
+    Top = 312
+    Width = 16
+    Height = 13
+    Caption = 'B3'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label11: TLabel
+    Left = 312
+    Top = 312
+    Width = 16
+    Height = 13
+    Caption = 'B4'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label26: TLabel
+    Left = 56
+    Top = 336
+    Width = 16
+    Height = 13
+    Caption = 'A0'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label28: TLabel
+    Left = 248
+    Top = 336
+    Width = 16
+    Height = 13
+    Caption = 'A3'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object Label29: TLabel
+    Left = 312
+    Top = 336
+    Width = 16
+    Height = 13
+    Caption = 'A4'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Top = 8
+    Width = 769
+    Height = 169
+    Caption = 'Data Sampling'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 0
+    object Chart2: TChart
+      Left = 9
+      Top = 17
+      Width = 416
+      Height = 144
+      AnimatedZoom = True
+      BackWall.Brush.Color = clWhite
+      BackWall.Brush.Style = bsClear
+      MarginBottom = 5
+      MarginLeft = 2
+      MarginRight = 5
+      MarginTop = 5
+      Title.Text.Strings = (
+        '')
+      BottomAxis.Automatic = False
+      BottomAxis.AutomaticMaximum = False
+      BottomAxis.AutomaticMinimum = False
+      BottomAxis.Maximum = 25.000000000000000000
+      Legend.Visible = False
+      RightAxis.Visible = False
+      TopAxis.Visible = False
+      View3D = False
+      BevelInner = bvRaised
+      BevelOuter = bvNone
+      Color = clSkyBlue
+      TabOrder = 0
+      object Label27: TLabel
+        Left = 152
+        Top = 8
+        Width = 123
+        Height = 13
+        Caption = 'Sinyal Sampling : x[n]'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label34: TLabel
+        Left = 398
+        Top = 107
+        Width = 8
+        Height = 13
+        Caption = 'n'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Series1: TFastLineSeries
+        Marks.ArrowLength = 0
+        Marks.Style = smsValue
+        Marks.Visible = False
+        SeriesColor = clRed
+        LinePen.Color = clRed
+        XValues.DateTime = False
+        XValues.Name = 'X'
+        XValues.Multiplier = 1.000000000000000000
+        XValues.Order = loAscending
+        YValues.DateTime = False
+        YValues.Name = 'Y'
+        YValues.Multiplier = 1.000000000000000000
+        YValues.Order = loNone
+      end
+    end
+    object Chart3: TChart
+      Left = 432
+      Top = 17
+      Width = 329
+      Height = 144
+      AnimatedZoom = True
+      BackWall.Brush.Color = clWhite
+      BackWall.Brush.Style = bsClear
+      MarginBottom = 5
+      MarginLeft = 2
+      MarginRight = 5
+      MarginTop = 5
+      Title.Text.Strings = (
+        '')
+      Legend.Visible = False
+      RightAxis.Visible = False
+      TopAxis.Visible = False
+      View3D = False
+      BevelInner = bvRaised
+      BevelOuter = bvNone
+      Color = clSkyBlue
+      TabOrder = 1
+      object Label31: TLabel
+        Left = 80
+        Top = 8
+        Width = 179
+        Height = 13
+        Caption = 'Spektrum Sinyal Hasil Sampling'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label35: TLabel
+        Left = 332
+        Top = 107
+        Width = 5
+        Height = 13
+        Caption = 'f'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Series2: TFastLineSeries
+        Marks.ArrowLength = 20
+        Marks.Style = smsValue
+        Marks.Visible = False
+        SeriesColor = clRed
+        LinePen.Color = clRed
+        XValues.DateTime = False
+        XValues.Name = 'X'
+        XValues.Multiplier = 1.000000000000000000
+        XValues.Order = loAscending
+        YValues.DateTime = False
+        YValues.Name = 'Y'
+        YValues.Multiplier = 1.000000000000000000
+        YValues.Order = loNone
+      end
+    end
+  end
+  object Chart1: TChart
+    Left = 16
+    Top = 185
+    Width = 417
+    Height = 120
+    AnimatedZoom = True
+    BackWall.Brush.Color = clWhite
+    BackWall.Brush.Style = bsClear
+    MarginBottom = 5
+    MarginLeft = 2
+    MarginRight = 5
+    MarginTop = 5
+    Title.Text.Strings = (
+      '')
+    LeftAxis.ExactDateTime = False
+    LeftAxis.Increment = 0.100000000000000000
+    Legend.Visible = False
+    RightAxis.Visible = False
+    TopAxis.Visible = False
+    View3D = False
+    BevelInner = bvRaised
+    BevelOuter = bvNone
+    Color = clSkyBlue
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 136
+      Top = 8
+      Width = 148
+      Height = 13
+      Caption = 'Frekuensi Response Filter'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label2: TLabel
+      Left = 398
+      Top = 83
+      Width = 5
+      Height = 13
+      Caption = 'f'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -9
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object FastLineSeries1: TFastLineSeries
+      Marks.ArrowLength = 0
+      Marks.Style = smsValue
+      Marks.Visible = False
+      SeriesColor = clRed
+      LinePen.Color = clRed
+      XValues.DateTime = False
+      XValues.Name = 'X'
+      XValues.Multiplier = 1.000000000000000000
+      XValues.Order = loAscending
+      YValues.DateTime = False
+      YValues.Name = 'Y'
+      YValues.Multiplier = 1.000000000000000000
+      YValues.Order = loNone
+    end
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Top = 360
+    Width = 769
+    Height = 169
+    Caption = 'Data Sinyal Terfilter'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 2
+    object Chart4: TChart
+      Left = 9
+      Top = 17
+      Width = 416
+      Height = 144
+      AnimatedZoom = True
+      BackWall.Brush.Color = clWhite
+      BackWall.Brush.Style = bsClear
+      MarginBottom = 5
+      MarginLeft = 2
+      MarginRight = 5
+      MarginTop = 5
+      Title.Text.Strings = (
+        '')
+      Legend.Visible = False
+      RightAxis.Visible = False
+      TopAxis.Visible = False
+      View3D = False
+      BevelInner = bvRaised
+      BevelOuter = bvNone
+      Color = clSkyBlue
+      TabOrder = 0
+      object Label3: TLabel
+        Left = 8
+        Top = 8
+        Width = 401
+        Height = 13
+        Caption = 
+          'y[n]=B0x[n]+B1x[n-1]+B2x[n-2]+B3x[n-3]+B4x[n-4]-A1y[n-1]-A2y[n-2' +
+          ']-A3y[n-3]-A4y[n-4]'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -8
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object Label4: TLabel
+        Left = 398
+        Top = 107
+        Width = 8
+        Height = 13
+        Caption = 'n'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object FastLineSeries2: TFastLineSeries
+        Marks.ArrowLength = 0
+        Marks.Style = smsValue
+        Marks.Visible = False
+        SeriesColor = clRed
+        LinePen.Color = clRed
+        XValues.DateTime = False
+        XValues.Name = 'X'
+        XValues.Multiplier = 1.000000000000000000
+        XValues.Order = loAscending
+        YValues.DateTime = False
+        YValues.Name = 'Y'
+        YValues.Multiplier = 1.000000000000000000
+        YValues.Order = loNone
+      end
+    end
+    object Chart5: TChart
+      Left = 432
+      Top = 17
+      Width = 329
+      Height = 144
+      AnimatedZoom = True
+      BackWall.Brush.Color = clWhite
+      BackWall.Brush.Style = bsClear
+      MarginBottom = 5
+      MarginLeft = 2
+      MarginRight = 5
+      MarginTop = 5
+      Title.Text.Strings = (
+        '')
+      Legend.Visible = False
+      RightAxis.Visible = False
+      TopAxis.Visible = False
+      View3D = False
+      BevelInner = bvRaised
+      BevelOuter = bvNone
+      Color = clSkyBlue
+      TabOrder = 1
+      object Label5: TLabel
+        Left = 104
+        Top = 8
+        Width = 140
+        Height = 13
+        Caption = 'Spektrum Sinyal Terfilter'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object Label6: TLabel
+        Left = 332
+        Top = 107
+        Width = 5
+        Height = 13
+        Caption = 'f'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -9
+        Font.Name = 'MS Sans Serif'
+        Font.Style = [fsBold]
+        ParentFont = False
+      end
+      object FastLineSeries3: TFastLineSeries
+        Marks.ArrowLength = 20
+        Marks.Style = smsValue
+        Marks.Visible = False
+        SeriesColor = clRed
+        LinePen.Color = clRed
+        XValues.DateTime = False
+        XValues.Name = 'X'
+        XValues.Multiplier = 1.000000000000000000
+        XValues.Order = loAscending
+        YValues.DateTime = False
+        YValues.Name = 'Y'
+        YValues.Multiplier = 1.000000000000000000
+        YValues.Order = loNone
+      end
+    end
+  end
+  object GroupBox3: TGroupBox
+    Left = 440
+    Top = 184
+    Width = 105
+    Height = 65
+    Caption = 'Jenis Filter'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 3
+    object RdBttnButterworth: TRadioButton
+      Left = 8
+      Top = 24
+      Width = 89
+      Height = 17
+      Caption = 'Butterworth'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+    end
+    object RdBttnChebyshev: TRadioButton
+      Left = 8
+      Top = 40
+      Width = 89
+      Height = 17
+      Caption = 'Chebyshev'
+      Enabled = False
+      TabOrder = 1
+    end
+  end
+  object GroupBox4: TGroupBox
+    Left = 552
+    Top = 184
+    Width = 113
+    Height = 169
+    Caption = 'Parameter Filter'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 4
+    object Label8: TLabel
+      Left = 16
+      Top = 88
+      Width = 47
+      Height = 13
+      Caption = 'Fc LOW'
+    end
+    object Label9: TLabel
+      Left = 16
+      Top = 120
+      Width = 50
+      Height = 13
+      Caption = 'Fc HIGH'
+    end
+    object EditFcLow: TEdit
+      Left = 72
+      Top = 88
+      Width = 33
+      Height = 21
+      TabOrder = 0
+      Text = '100'
+    end
+    object EditFcHi: TEdit
+      Left = 72
+      Top = 120
+      Width = 33
+      Height = 21
+      Enabled = False
+      TabOrder = 1
+      Text = '400'
+    end
+    object RdBttnOrde2: TRadioButton
+      Left = 16
+      Top = 24
+      Width = 81
+      Height = 17
+      Caption = 'ORDER 2'
+      Checked = True
+      TabOrder = 2
+      TabStop = True
+    end
+    object RdBttnOrde4: TRadioButton
+      Left = 16
+      Top = 48
+      Width = 81
+      Height = 17
+      Caption = 'ORDER 4'
+      TabOrder = 3
+    end
+  end
+  object GroupBox5: TGroupBox
+    Left = 440
+    Top = 256
+    Width = 105
+    Height = 97
+    Caption = 'Tipe Filter'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 5
+    object RdBttnLowPass: TRadioButton
+      Left = 8
+      Top = 24
+      Width = 81
+      Height = 17
+      Caption = 'Low Pass'
+      Checked = True
+      TabOrder = 0
+      TabStop = True
+      OnClick = RdBttnLowPassClick
+    end
+    object RdBttnHiPass: TRadioButton
+      Left = 8
+      Top = 40
+      Width = 73
+      Height = 17
+      Caption = 'Hi Pass'
+      TabOrder = 1
+      OnClick = RdBttnHiPassClick
+    end
+    object RdBttnBandPass: TRadioButton
+      Left = 8
+      Top = 56
+      Width = 89
+      Height = 17
+      Caption = 'Band Pass'
+      TabOrder = 2
+      OnClick = RdBttnBandPassClick
+    end
+    object RdBttnBandStop: TRadioButton
+      Left = 8
+      Top = 72
+      Width = 81
+      Height = 17
+      Caption = 'Band Stop'
+      TabOrder = 3
+      OnClick = RdBttnBandStopClick
+    end
+  end
+  object ButtonFrekRespFilter: TButton
+    Left = 672
+    Top = 304
+    Width = 113
+    Height = 41
+    Caption = 'Freq. Resp. Filter'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 6
+    OnClick = ButtonFrekRespFilterClick
+  end
+  object ButtonFiltering: TButton
+    Left = 792
+    Top = 304
+    Width = 89
+    Height = 41
+    Caption = 'FILTERING'
+    Enabled = False
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clRed
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 7
+    OnClick = ButtonFilteringClick
+  end
+  object GroupBox6: TGroupBox
+    Left = 784
+    Top = 176
+    Width = 209
+    Height = 113
+    Caption = 'Data File Simulasi'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 8
+    object BttnLoadFile: TButton
+      Left = 8
+      Top = 24
+      Width = 57
+      Height = 25
+      Cancel = True
+      Caption = 'Load File'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnClick = BttnLoadFileClick
+    end
+    object EditLoadNamaFile: TEdit
+      Left = 72
+      Top = 24
+      Width = 129
+      Height = 21
+      TabOrder = 1
+    end
+    object Panel1: TPanel
+      Left = 8
+      Top = 56
+      Width = 193
+      Height = 49
+      BevelOuter = bvLowered
+      TabOrder = 2
+      object LabelNamaFile: TLabel
+        Left = 8
+        Top = 8
+        Width = 69
+        Height = 13
+        Caption = 'Nama File = '#39'  '#39
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+      object LabelTimeSampling: TLabel
+        Left = 8
+        Top = 24
+        Width = 91
+        Height = 13
+        Caption = 'Time Sampling = '#39'  '#39
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clWindowText
+        Font.Height = -11
+        Font.Name = 'MS Sans Serif'
+        Font.Style = []
+        ParentFont = False
+      end
+    end
+  end
+  object GroupBox7: TGroupBox
+    Left = 672
+    Top = 184
+    Width = 105
+    Height = 105
+    Caption = 'Frek. Sampling'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 9
+    object RdBttn100Hz: TRadioButton
+      Left = 16
+      Top = 16
+      Width = 81
+      Height = 17
+      Caption = '100   Hz'
+      TabOrder = 0
+    end
+    object RdBttn200Hz: TRadioButton
+      Left = 16
+      Top = 32
+      Width = 73
+      Height = 17
+      Caption = '200   Hz'
+      TabOrder = 1
+    end
+    object RdBttn500Hz: TRadioButton
+      Left = 16
+      Top = 48
+      Width = 81
+      Height = 17
+      Caption = '500   Hz'
+      TabOrder = 2
+    end
+    object RdBttn1000Hz: TRadioButton
+      Left = 16
+      Top = 64
+      Width = 73
+      Height = 17
+      Caption = '1000 Hz'
+      TabOrder = 3
+    end
+    object RdBttn2000Hz: TRadioButton
+      Left = 16
+      Top = 80
+      Width = 81
+      Height = 17
+      Caption = '2000 Hz'
+      Checked = True
+      TabOrder = 4
+      TabStop = True
+    end
+  end
+  object BttnPortSetting: TButton
+    Left = 888
+    Top = 304
+    Width = 105
+    Height = 41
+    Caption = 'PORT SETTING'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 10
+    OnClick = BttnPortSettingClick
+  end
+  object GroupBox10: TGroupBox
+    Left = 784
+    Top = 360
+    Width = 209
+    Height = 169
+    Caption = 'Data External ADC'
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'MS Sans Serif'
+    Font.Style = [fsBold]
+    ParentFont = False
+    TabOrder = 11
+    object S1: TShape
+      Left = 176
+      Top = 58
+      Width = 25
+      Height = 15
+      Brush.Color = clGreen
+      Shape = stCircle
+    end
+    object S2: TShape
+      Left = 176
+      Top = 90
+      Width = 25
+      Height = 15
+      Brush.Color = clGreen
+      Shape = stCircle
+    end
+    object Label12: TLabel
+      Left = 16
+      Top = 24
+      Width = 102
+      Height = 13
+      Caption = 'Jumlah Data Max:'
+    end
+    object SpdBttnAdcToRam: TSpeedButton
+      Left = 96
+      Top = 56
+      Width = 81
+      Height = 25
+      Caption = 'ADC to RAM'
+      Enabled = False
+      OnClick = SpdBttnAdcToRamClick
+    end
+    object SpdBttnGetDataRam: TSpeedButton
+      Left = 16
+      Top = 88
+      Width = 161
+      Height = 25
+      Caption = 'GET DATA RAM'
+      Enabled = False
+      OnClick = SpdBttnGetDataRamClick
+    end
+    object SpdBttnOpenPort: TSpeedButton
+      Left = 16
+      Top = 56
+      Width = 73
+      Height = 25
+      AllowAllUp = True
+      GroupIndex = 3
+      Caption = 'OPEN PORT'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      OnClick = SpdBttnOpenPortClick
+    end
+    object ButtonSaveFile: TButton
+      Left = 16
+      Top = 128
+      Width = 57
+      Height = 25
+      Caption = 'Save File'
+      Enabled = False
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'MS Sans Serif'
+      Font.Style = []
+      ParentFont = False
+      TabOrder = 0
+      OnClick = ButtonSaveFileClick
+    end
+    object EditSaveNamaFile: TEdit
+      Left = 80
+      Top = 128
+      Width = 113
+      Height = 21
+      Enabled = False
+      TabOrder = 1
+      Text = 'NamaFile.dat'
+    end
+    object EditMaxData: TEdit
+      Left = 128
+      Top = 24
+      Width = 41
+      Height = 21
+      TabOrder = 2
+      Text = '1000'
+    end
+  end
+  object GroupBox8: TGroupBox
+    Left = 784
+    Top = 8
+    Width = 97
+    Height = 73
+    Caption = 'Sinyal1'
+    TabOrder = 12
+    object Label20: TLabel
+      Left = 8
+      Top = 16
+      Width = 40
+      Height = 16
+      Caption = 'Amp1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label21: TLabel
+      Left = 8
+      Top = 40
+      Width = 40
+      Height = 16
+      Caption = 'Frek1'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object EditAmp1: TEdit
+      Left = 56
+      Top = 16
+      Width = 33
+      Height = 21
+      TabOrder = 0
+      Text = '2'
+    end
+    object EditFrek1: TEdit
+      Left = 56
+      Top = 40
+      Width = 33
+      Height = 21
+      TabOrder = 1
+      Text = '10'
+    end
+  end
+  object GroupBox9: TGroupBox
+    Left = 896
+    Top = 8
+    Width = 97
+    Height = 73
+    Caption = 'Sinyal2'
+    TabOrder = 13
+    object Label22: TLabel
+      Left = 8
+      Top = 16
+      Width = 40
+      Height = 16
+      Caption = 'Amp2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label23: TLabel
+      Left = 8
+      Top = 40
+      Width = 40
+      Height = 16
+      Caption = 'Frek2'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object EditAmp2: TEdit
+      Left = 56
+      Top = 16
+      Width = 33
+      Height = 21
+      TabOrder = 0
+      Text = '2'
+    end
+    object EditFrek2: TEdit
+      Left = 56
+      Top = 40
+      Width = 33
+      Height = 21
+      TabOrder = 1
+      Text = '200'
+    end
+  end
+  object GroupBox11: TGroupBox
+    Left = 784
+    Top = 88
+    Width = 97
+    Height = 73
+    Caption = 'Sinyal3'
+    TabOrder = 14
+    object Label24: TLabel
+      Left = 8
+      Top = 16
+      Width = 40
+      Height = 16
+      Caption = 'Amp3'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object Label25: TLabel
+      Left = 8
+      Top = 40
+      Width = 40
+      Height = 16
+      Caption = 'Frek3'
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'MS Sans Serif'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object EditAmp3: TEdit
+      Left = 56
+      Top = 16
+      Width = 33
+      Height = 21
+      TabOrder = 0
+      Text = '3'
+    end
+    object EditFrek3: TEdit
+      Left = 56
+      Top = 40
+      Width = 33
+      Height = 21
+      TabOrder = 1
+      Text = '300'
+    end
+  end
+  object EditA1: TEdit
+    Left = 136
+    Top = 336
+    Width = 41
+    Height = 21
+    TabOrder = 15
+  end
+  object EditA2: TEdit
+    Left = 200
+    Top = 336
+    Width = 41
+    Height = 21
+    TabOrder = 16
+  end
+  object EditB0: TEdit
+    Left = 72
+    Top = 312
+    Width = 41
+    Height = 21
+    TabOrder = 17
+  end
+  object EditB1: TEdit
+    Left = 136
+    Top = 312
+    Width = 41
+    Height = 21
+    TabOrder = 18
+  end
+  object EditB2: TEdit
+    Left = 200
+    Top = 312
+    Width = 41
+    Height = 21
+    TabOrder = 19
+  end
+  object EditA3: TEdit
+    Left = 264
+    Top = 336
+    Width = 41
+    Height = 21
+    TabOrder = 20
+  end
+  object EditA4: TEdit
+    Left = 328
+    Top = 336
+    Width = 41
+    Height = 21
+    TabOrder = 21
+  end
+  object EditB3: TEdit
+    Left = 264
+    Top = 312
+    Width = 41
+    Height = 21
+    TabOrder = 22
+  end
+  object EditB4: TEdit
+    Left = 328
+    Top = 312
+    Width = 41
+    Height = 21
+    TabOrder = 23
+  end
+  object EditA0: TEdit
+    Left = 72
+    Top = 336
+    Width = 41
+    Height = 21
+    TabOrder = 24
+  end
+  object ComPort1: TComPort
+    BaudRate = br9600
+    Port = 'COM1'
+    Parity.Bits = prNone
+    StopBits = sbOneStopBit
+    DataBits = dbEight
+    Events = [evRxChar, evTxEmpty, evRxFlag, evRing, evBreak, evCTS, evDSR, evError, evRLSD, evRx80Full]
+    FlowControl.OutCTSFlow = False
+    FlowControl.OutDSRFlow = False
+    FlowControl.ControlDTR = dtrDisable
+    FlowControl.ControlRTS = rtsDisable
+    FlowControl.XonXoffOut = False
+    FlowControl.XonXoffIn = False
+    Left = 933
+    Top = 154
+  end
+  object OpenDialog1: TOpenDialog
+    Left = 904
+    Top = 152
+  end
+end
